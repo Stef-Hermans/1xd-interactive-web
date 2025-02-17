@@ -38,3 +38,59 @@
 // 10. create an object `person` with properties `name`, `age` and `favoriteFoods`
 // use the array `foods` as the value for the `favoriteFoods` property
 // log the object to the console
+
+let myName = "Stef";
+
+// 3. Create a variable that asks for your birth year
+let birthYear = parseInt(prompt("What is your birth year?"));
+
+// 4. Calculate your age
+let currentYear = new Date().getFullYear();
+let age = currentYear - birthYear;
+
+// 5. Log your age to the console
+console.log(`You are ${age} years old.`);
+
+// 6. Write a greet() function
+function greet(name) {
+  console.log(`Hi there, ${name}! Have a nice day!`);
+}
+greet(myName);
+
+// 7. Write a calculateAge() function
+function calculateAge(yearOfBirth) {
+  let calculatedAge = new Date().getFullYear() - yearOfBirth;
+  console.log(`Your age is ${calculatedAge}.`);
+}
+calculateAge(birthYear);
+
+// 8. Ask how you're feeling today and log an emoji
+let feeling = prompt("How are you feeling today? (good, bad, ok)");
+switch (feeling.toLowerCase()) {
+  case "good":
+    console.log("😊");
+    break;
+  case "bad":
+    console.log("😞");
+    break;
+  case "ok":
+    console.log("😐");
+    break;
+  default:
+    console.log("🤔");
+    break;
+}
+
+// 9. Create an array `foods` and loop through it
+let foods = ["Pizza", "Fries", "Pasta pesto"];
+for (let i = 0; i < foods.length; i++) {
+  console.log(foods[i]);
+}
+
+// 10. Create an object `person`
+let person = {
+  name: myName,
+  age: age,
+  favoriteFoods: foods,
+};
+console.log(person);
