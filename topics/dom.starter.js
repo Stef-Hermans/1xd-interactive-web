@@ -26,3 +26,41 @@ ______ ________  ___
 // hint: use the setAttribute function, or use the className property, or use the classList property
 
 // render a ul with li elements
+
+// 1 - Selecteer de tweede paragraaf en verander de achtergrondkleur naar geel
+const secondParagraph = document.getElementById("paragraph2");
+if (secondParagraph) {
+  secondParagraph.style.backgroundColor = "yellow";
+}
+
+// 2 - Selecteer de paragraaf met id #paragraph3 en verander de tekst
+const thirdParagraph = document.getElementById("paragraph3");
+if (thirdParagraph) {
+  thirdParagraph.innerHTML = "Never gonna run around and desert you";
+}
+
+// 3 - Selecteer alle span-elementen met de class "grabme" en verander hun innerHTML
+const spanElements = document.querySelectorAll(".grabme");
+console.log(spanElements); // Logt de NodeList naar de console
+
+spanElements.forEach((span) => {
+  span.innerHTML = "😎"; // Verandert naar een zonnebril emoji
+});
+
+// 4 - Verander de CSS-class van het element met id "message" naar "error"
+const messageElement = document.getElementById("message");
+if (messageElement) {
+  messageElement.className = "error"; // Verandert de class naar "error"
+}
+
+// 5 - Maak een unordered list (ul) met list items (li) en voeg deze toe aan de body
+const ulElement = document.createElement("ul");
+const items = ["Item 1", "Item 2", "Item 3"];
+
+items.forEach((item) => {
+  const li = document.createElement("li");
+  li.textContent = item;
+  ulElement.appendChild(li);
+});
+
+document.body.appendChild(ulElement);
